@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Calculator </title>
+</head>
+
+<body>
+<h1> Calculator </h1>
+<p id="num"> </p>
+<script>
+var num1=27;
+var num2=13;
+const operator="*";
+if (operator=="+") 
+{
+document.getElementById("num").innerHTML= "Sum of " + num1 + " and " + num2 + " is " + (num1+num2);
+}
+else if (operator=="-") 
+{
+document.getElementById("num").innerHTML= "Difference of " + num1 + " and " + num2 + " is " + (num1-num2);
+}
+else if (operator=="*") 
+{
+document.getElementById("num").innerHTML= "Product of " + num1 + " and " + num2 + " is " + (num1*num2);
+}
+else if ((operator=="/")&&(num2!=0)) 
+{
+document.getElementById("num").innerHTML= "Division of " + num1 + " by " + num2 + " gives " + (num1/num2);
+}
+else 
+{
+document.getElementById("num").innerHTML= "Invalid operator or you are trying to perform division by 0 which is invalid.";
+}
+</script>
+</body>
+</html>
