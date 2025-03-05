@@ -1,36 +1,56 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title> Calculator </title>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="colourContrasts.css">
 </head>
 
 <body>
-<h1> Calculator </h1>
-<p id="num"> </p>
-<script>
-var num1=27;
-var num2=13;
-const operator="*";
-if (operator=="+") 
-{
-document.getElementById("num").innerHTML= "Sum of " + num1 + " and " + num2 + " is " + (num1+num2);
-}
-else if (operator=="-") 
-{
-document.getElementById("num").innerHTML= "Difference of " + num1 + " and " + num2 + " is " + (num1-num2);
-}
-else if (operator=="*") 
-{
-document.getElementById("num").innerHTML= "Product of " + num1 + " and " + num2 + " is " + (num1*num2);
-}
-else if ((operator=="/")&&(num2!=0)) 
-{
-document.getElementById("num").innerHTML= "Division of " + num1 + " by " + num2 + " gives " + (num1/num2);
-}
-else 
-{
-document.getElementById("num").innerHTML= "Invalid operator or you are trying to perform division by 0 which is invalid.";
-}
-</script>
+
+<h1>Simple Calculator</h1>
+
+<div class="settings">
+    <label for="fontSize">Font Size:</label>
+    <select id="fontSize">
+        <option value="14px">Small</option>
+        <option value="18px" selected>Medium</option>
+        <option value="24px">Large</option>
+    </select>
+
+    <button id="contrastToggle">Toggle Light/Dark Mode</button>
+</div>
+
+<input type="text" id="display" readonly>
+
+<div class="buttons">
+    <button class="number">1</button>
+    <button class="number">2</button>
+    <button class="number">3</button>
+    <button class="operator">+</button>
+    <br>
+    <button class="number">4</button>
+    <button class="number">5</button>
+    <button class="number">6</button>
+    <button class="operator">-</button>
+    <br>
+    <button class="number">7</button>
+    <button class="number">8</button>
+    <button class="number">9</button>
+    <button class="operator">*</button>
+    <br>
+    <button class="number">0</button>
+    <button class="decimal">.</button>
+    <button class="operator">/</button>
+    <button class="equal">=</button>
+    <br>
+    <button id="percentage">%</button>
+    <button id="exponentiation">^</button>
+    <button id="factorial">!</button>
+    <button id="clear">Clear</button>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
